@@ -1,0 +1,63 @@
+ALGOROTHM Dot_product
+Procedure dot_product(tableau1,tableau2: ARRAY_OF INTEGER, VAR ps : INTEGER)
+var i : integer;
+begin
+i:=0;
+ps:=0;
+if tableau1.length <> tableau2.length then
+ Write("les deux tableaux doivent être de la même taille);
+  BREAK;
+end if
+for(i:=0; i< tableau1.length; i++ )
+ps:= ps + tableau1[i]*tableau2[i]
+
+next
+
+
+end
+
+ALGORITHM verif_orth_proc
+VAR
+    tableau1,tableau2 : ARRAY_OF INTEGER;
+    ps : INTEGER;
+BEGIN
+    
+    dot_product(tableau1,tableau2,ps);
+    IF (ps = 0) THEN
+        Write("les deux vecteurs sont orthogonal");
+    ELSE
+        Write("les deux vecteurs ne sont pas orthogonal");
+    END_IF
+END
+
+
+Function func_dot_product(tableau1,tableau2: ARRAY_OF INTEGER, VAR ps : INTEGER)
+var i : integer;
+begin
+i:=0;
+ps:=0;
+if tableau1.length <> tableau2.length then
+ Write("les deux tableaux doivent être de la même taille);
+  BREAK;
+end if
+for(i:=0; i< tableau1.length; i++ )
+ps:= ps + tableau1[i]*tableau2[i]
+
+next
+return ps
+
+end
+
+ALGORITHM verif_orth_func
+VAR
+    tableau1,tableau2 : ARRAY_OF INTEGER;
+    ps : INTEGER;
+BEGIN
+    
+    func_dot_product(tableau1,tableau2,ps);
+    IF (ps = 0) THEN
+        Write("les deux vecteurs sont orthogonal");
+    ELSE
+        Write("les deux vecteurs ne sont pas orthogonal");
+    END_IF
+END
